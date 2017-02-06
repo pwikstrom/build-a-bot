@@ -1,0 +1,47 @@
+body {
+  font: 18px, arial;
+  background: #000000;
+  color: black;
+}
+
+p {
+  font-family: "Arial", Sans-serif;
+  font-size: 10px;
+  color: white;
+}
+
+.imgWrap {
+  position: relative;
+  height:150;
+  width:150;
+  display:inline-block;
+}
+
+.centered-and-cropped { object-fit: cover }
+.crop { overflow: hidden; }
+
+
+.imgDescription {
+  font: 10px/1.4 arial;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.75);
+  color: #fff;
+
+
+  visibility: hidden;
+  opacity: 0;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
